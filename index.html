@@ -1,112 +1,115 @@
 <!DOCTYPE html>
 <html lang="ckb" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADEL BRAND</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-        body {
-            background-color: #f4f6f8;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            margin: 20px 0 30px;
-        }
-        header h1 {
-            font-size: 2.2rem;
-            color: #111;
-            letter-spacing: 1px;
-        }
-        header p {
-            color: #666;
-            margin-top: 5px;
-        }
-        .container {
-            width: 100%;
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .card {
-            background-color: #1e1e24;
-            color: #ffffff;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        .card h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-        .card p {
-            color: #b3b3b3;
-            line-height: 1.6;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-        .price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #4da6ff;
-            margin-bottom: 15px;
-        }
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 12px;
-            background-color: #ffffff;
-            color: #1e1e24;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-        }
-        footer {
-            margin-top: auto;
-            padding: 20px 0;
-            color: #888;
-            font-size: 0.85rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADEL SEWING MACHINES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background-color: #f5f5f7; color: #1d1d1f; padding-bottom: 30px; }
+
+    /* Header & Banner */
+    .hero { position: relative; width: 100%; height: 230px; background: #0b071e; overflow: hidden; }
+    .hero-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+    .logo-badge { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); border: 2px solid #fff; border-radius: 50%; width: 70px; height: 70px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 11px; }
+    .welcome-text { position: absolute; bottom: 55px; left: 0; right: 0; text-align: center; color: #fff; font-size: 20px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+    
+    /* Quick Actions */
+    .quick-actions { position: absolute; bottom: 10px; right: 15px; display: flex; gap: 10px; }
+    .action-btn { background: rgba(255,255,255,0.25); backdrop-filter: blur(5px); color: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; }
+
+    /* Announcement Bar */
+    .ticker { background: #fff; padding: 12px 15px; font-size: 14px; font-weight: bold; text-align: center; border-bottom: 1px solid #e5e5e5; color: #1d1d1f; }
+
+    /* Categories Horizontal Scroll */
+    .categories { display: flex; gap: 8px; overflow-x: auto; padding: 15px; background: #0b071e; direction: rtl; }
+    .cat-btn { background: #1c1538; color: #a5a6f6; border: none; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: bold; white-space: nowrap; cursor: pointer; }
+    .cat-btn.active { background: #6366f1; color: #fff; }
+
+    /* Product Grid */
+    .container { padding: 15px; }
+    .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .product-card { background: #0d0d12; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .product-img { width: 100%; height: 210px; object-fit: cover; background: #fff; }
+    .product-info { padding: 10px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; }
+    .product-title { color: #ffffff; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; line-height: 1.3; }
+    .product-price { color: #818cf8; font-size: 14px; font-weight: bold; text-align: left; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>ADEL BRAND</h1>
-        <p>فرۆشگای فەرمی بەرهەمەکان</p>
-    </header>
 
-    <div class="container">
-        <div class="card">
-            <h2>بەرهەمی یەکەم</h2>
-            <p>وەسفی بەرهەمەکە لێرە بنووسە. دیزاینی تاریک لەسەر باگراوندی ڕۆشن.</p>
-            <div class="price">$25.00</div>
-            <a href="#" class="btn">داواکردن / کڕین</a>
-        </div>
-
-        <div class="card">
-            <h2>بەرهەمی دووەم</h2>
-            <p>وەسفی بەرهەمی دووەم لێرە بنووسە. بەرزترین کوالیتی و باشترین نرخ.</p>
-            <div class="price">$40.00</div>
-            <a href="#" class="btn">داواکردن / کڕین</a>
-        </div>
+  <!-- Banner Section -->
+  <div class="hero">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1616853760444-24534e569262?w=800" alt="Sewing Machine">
+    <div class="logo-badge">
+      <span>ADEL</span>
+      <span style="font-size: 8px;">SEWING</span>
     </div>
+    <div class="welcome-text">مرحبًا بكم في متجر أدیل</div>
+    <div class="quick-actions">
+      <a href="tel:07500000000" class="action-btn"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://wa.me/9647500000000" class="action-btn"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" class="action-btn"><i class="fa-solid fa-location-dot"></i></a>
+    </div>
+  </div>
 
-    <footer>
-        <p>© 2026 ADEL BRAND. هەموو مافەکانی پارێزراوە.</p>
-    </footer>
+  <!-- Announcement Bar -->
+  <div class="ticker">
+    أفضل مئاکین الخياطة ومستلزماتها بضمان حقيقي - Adel Brand!
+  </div>
+
+  <!-- Categories -->
+  <div class="categories">
+    <button class="cat-btn active">الكل</button>
+    <button class="cat-btn">نوي 🧵</button>
+    <button class="cat-btn">مەکینەی کارەبایی ⚡</button>
+    <button class="cat-btn">داشکاندن 💯</button>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="container">
+    <div class="product-grid">
+      
+      <!-- Item 1 -->
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500" alt="Brother Machine">
+        <div class="product-info">
+          <div class="product-title">BROTHER SUPER AUTOMATIC</div>
+          <div class="product-price">$ 250</div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1616853760444-24534e569262?w=500" alt="Industrial Machine">
+        <div class="product-info">
+          <div class="product-title">INDUSTRIAL SEWING MACHINE</div>
+          <div class="product-price">$ 320</div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500" alt="Sewing Tools">
+        <div class="product-info">
+          <div class="product-title">PROFESSIONAL SCISSORS & KIT</div>
+          <div class="product-price">$ 25</div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="product-card">
+        <img class="product-img" src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500" alt="Mini Machine">
+        <div class="product-info">
+          <div class="product-title">MINI PORTABLE SEWING MACHINE</div>
+          <div class="product-price">$ 45</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
+
