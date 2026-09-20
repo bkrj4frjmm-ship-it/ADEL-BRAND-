@@ -8,15 +8,13 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
         body { background-color: #0f1115; color: #f3f4f6; padding-bottom: 50px; }
         
-        /* Premium Sewing Machine Header & Cover */
+        /* Profile Header with Machine Cover Image */
         .profile-header {
             position: relative;
             width: 100%;
-            min-height: 380px;
-            background: linear-gradient(180deg, rgba(15, 17, 21, 0.2) 0%, rgba(15, 17, 21, 0.9) 100%),
-                        url('https://images.unsplash.com/photo-1605548230626-3ff6f3431633?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
+            min-height: 400px;
+            background: linear-gradient(180deg, rgba(15, 17, 21, 0.2) 0%, rgba(15, 17, 21, 0.9) 100%), 
+                        url('image_12.png') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -31,7 +29,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: rgba(15, 17, 21, 0.7);
+            background: rgba(15, 17, 21, 0.75);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #fff;
@@ -277,7 +275,7 @@
 </head>
 <body>
 
-    <!-- بەشی کەڤەر -->
+    <!-- بەشی کەڤەر بە وێنەی مەکینەکە -->
     <div class="profile-header">
         <div class="top-logo">
             <span>⚙️</span> پێشانگای عادل
