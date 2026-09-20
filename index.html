@@ -59,8 +59,9 @@
             font-weight: bold;
         }
 
-        .badge-row { display: flex; justify-content: flex-end; align-items: center; border-top: 1px solid #f0f0f2; padding-top: 12px; }
-        .badge-new { background: #e8f2ff; color: #0071e3; font-size: 13px; font-weight: bold; padding: 6px 14px; border-radius: 20px; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f0f0f2; padding-top: 12px; }
+        .price { font-size: 19px; font-weight: bold; color: #0071e3; }
+        .badge-new { background: #e8f2ff; color: #0071e3; font-size: 12px; font-weight: bold; padding: 4px 10px; border-radius: 20px; }
     </style>
 </head>
 <body>
@@ -73,6 +74,7 @@
     <div class="container">
         <div class="section-title">ڤیدیۆی نمایشی مەکینەکان</div>
         
+        <!-- بەرهەمی یەکەم: مەکینەی ئۆڤەر -->
         <div class="video-box">
             <div class="video-container">
                 <iframe src="https://www.youtube-nocookie.com/embed/UksJtW_eVCw?autoplay=0&mute=0&controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -80,7 +82,7 @@
             
             <div class="video-info">
                 <div class="video-title">مەکینەی ئۆڤەر بڕاندی عادل</div>
-                <div class="video-desc">بەردەستە بە سێ جۆری ناوازە بۆ هەموو پێداویستییەکانی دوورین:</div>
+                <div class="video-desc">بەردەستە بە جۆرەکانی:</div>
                 
                 <ul class="features-list">
                     <li>٣ داوو</li>
@@ -89,11 +91,35 @@
                     <li>لەگەڵ ٥ ساڵ زەمانەتی فەرمی</li>
                 </ul>
                 
-                <div class="badge-row">
+                <div class="badge-row" style="display: flex; justify-content: flex-end;">
                     <div class="badge-new">٥ ساڵ زەمانەت</div>
                 </div>
             </div>
         </div>
+
+        <!-- بەرهەمی دووەم: مەکینەی برادەر ٢٥ نەقشی یابانی -->
+        <div class="video-box">
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/SI0P8JNs4k8?autoplay=0&mute=0&controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="video-info">
+                <div class="video-title">مەکینەی برادەر ٢٥ نەقشی یابانی</div>
+                <div class="video-desc">مەکینەیەکی ئەسڵی و نایاب بە هەموو ئەشیای خۆیەوە.</div>
+                
+                <ul class="features-list">
+                    <li>٢٥ شێواز و نەخش</li>
+                    <li>کامل ئەشیای خۆی لەگەڵدایە</li>
+                    <li>دوو ساڵ زەمانەت</li>
+                </ul>
+                
+                <div class="price-row">
+                    <div class="price">٢٠٠ هەزار دینار</div>
+                    <div class="badge-new">٢ ساڵ زەمانەت</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </body>
