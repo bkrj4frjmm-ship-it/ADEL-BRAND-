@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADEL SEWING MACHINES - پێشانگای عادل بۆ مەکینەی دوورمان</title>
+    <title>پێشانگای عادل بۆ مەکینەی دوورمان</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
-        body { background-color: #f5f5f7; color: #1d1d1f; padding-bottom: 40px; }
+        body { background-color: #0f1115; color: #f3f4f6; padding-bottom: 50px; }
         
-        /* Profile & Header Style */
+        /* Premium Header & Cover */
         .profile-header {
             position: relative;
             width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%),
+            min-height: 280px;
+            background: linear-gradient(to bottom, rgba(15, 17, 21, 0.3), rgba(15, 17, 21, 0.95)),
                         url('https://images.unsplash.com/photo-1605548230626-3ff6f3431633?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
@@ -22,88 +22,57 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 20px;
-            color: #fff;
+            padding: 30px 20px;
         }
 
         /* Top Right Logo */
-        .top-logo-container {
+        .top-logo {
             position: absolute;
-            top: 15px;
+            top: 20px;
             right: 20px;
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #fff;
-            color: #0071e3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 30px;
             font-weight: bold;
-            font-size: 11px;
-            text-align: center;
-            border: 2px solid #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            line-height: 1.2;
-            padding: 4px;
+            font-size: 13px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .profile-content {
-            position: relative;
             z-index: 2;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
         }
+        
         .profile-title {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 6px;
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: #ffffff;
             letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-        .profile-bio {
-            font-size: 14px;
-            color: #e0e0e0;
-            max-width: 500px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .whatsapp-btn {
-            background-color: #25d366;
-            color: white;
-            padding: 9px 22px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-            transition: background 0.2s;
-        }
-        .whatsapp-btn:hover { background-color: #20ba5a; }
 
-        /* Moving Text Style (نوسینی جووڵاو) */
+        /* Moving Text (Marquee) */
         .marquee-container {
-            background-color: #0071e3;
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
             color: white;
-            padding: 10px 0;
+            padding: 12px 0;
             overflow: hidden;
             white-space: nowrap;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
         }
         .marquee-text {
             display: inline-block;
             padding-left: 100%;
-            animation: marquee 18s linear infinite;
+            animation: marquee 20s linear infinite;
             font-size: 14px;
             font-weight: bold;
         }
@@ -112,10 +81,55 @@
             100% { transform: translate(100%, 0); }
         }
 
-        .container { padding: 15px; max-width: 900px; margin: 0 auto; }
-        .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; color: #1d1d1f; border-right: 4px solid #0071e3; padding-right: 10px; }
+        /* Info Section Below Marquee (WhatsApp & Bio) */
+        .info-section {
+            background: #181b22;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 25px 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .bio-text {
+            font-size: 14px;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 18px auto;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .whatsapp-btn:hover { 
+            background-color: #20ba5a; 
+            transform: translateY(-2px);
+        }
+
+        .container { padding: 0 15px; max-width: 900px; margin: 0 auto; }
+        .section-title { 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            color: #fff; 
+            border-right: 4px solid #3b82f6; 
+            padding-right: 12px; 
+        }
         
-        /* Grid Layout for Products (تەنیشت یەکتر) */
+        /* Grid Layout for Products (دو ستوون لە تەنیشت یەکتر) */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -129,13 +143,19 @@
         }
 
         .video-box { 
-            background: #fff; 
-            border-radius: 16px; 
-            padding: 10px; 
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06); 
+            background: #181b22; 
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px; 
+            padding: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4); 
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .video-box:hover {
+            transform: translateY(-3px);
+            border-color: rgba(59, 130, 246, 0.4);
         }
         
         .video-container {
@@ -144,9 +164,9 @@
             padding-bottom: 177.77%;
             height: 0;
             background: #000;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .video-container iframe {
             position: absolute;
@@ -155,74 +175,92 @@
             width: 100%;
             height: 100%;
             border: none;
+            pointer-events: auto;
         }
         
-        .video-info { margin-top: 5px; }
-        .video-title { font-size: 13px; font-weight: bold; margin-bottom: 4px; color: #1d1d1f; }
-        .video-desc { font-size: 11px; color: #6e6e73; margin-bottom: 8px; line-height: 1.4; }
+        .video-info { margin-top: 4px; }
+        .video-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #fff; }
         
         .features-list {
             list-style: none;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             padding: 0;
         }
         .features-list li {
             font-size: 11px;
-            color: #333;
+            color: #94a3b8;
             padding: 2px 0;
             display: flex;
             align-items: center;
         }
         .features-list li::before {
             content: "✓";
-            color: #0071e3;
-            margin-left: 5px;
+            color: #3b82f6;
+            margin-left: 6px;
             font-weight: bold;
         }
 
-        .price-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f0f0f2; padding-top: 8px; margin-top: auto; }
-        .price { font-size: 13px; font-weight: bold; color: #0071e3; }
-        .badge-new { background: #e8f2ff; color: #0071e3; font-size: 10px; font-weight: bold; padding: 3px 8px; border-radius: 20px; }
+        .price-row { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-top: 1px solid rgba(255,255,255,0.06); 
+            padding-top: 10px; 
+            margin-top: auto; 
+        }
+        .price { font-size: 13px; font-weight: bold; color: #60a5fa; }
+        .badge-new { 
+            background: rgba(59, 130, 246, 0.15); 
+            color: #60a5fa; 
+            font-size: 10px; 
+            font-weight: bold; 
+            padding: 4px 10px; 
+            border-radius: 20px; 
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
     </style>
 </head>
 <body>
 
-    <!-- بەشی پرۆفایل، لۆگۆ لە دەستە ڕاست و پاشبنەمای مەکینەی دوورمان -->
+    <!-- بەشی کەڤەر و لۆگۆ لە دەستە ڕاستی سەرەوە -->
     <div class="profile-header">
-        <div class="top-logo-container">
-            <div class="logo-avatar">پێشانگای<br>عادل</div>
+        <div class="top-logo">
+            <span>⚙️</span> پێشانگای عادل
         </div>
 
         <div class="profile-content">
             <div class="profile-title">پێشانگای عادل</div>
-            <div class="profile-bio">ناونیشانی متمانە بۆ دابینکردنی باشترین مەکینەکانی دوورمان (ئۆڤەر و نەخشدار) بە باشترین نرخ و زەمانەتی فەرمی.</div>
-            <a href="https://wa.me/9647504908327" class="whatsapp-btn" target="_blank">
-                💬 پەیوەندی واتساپ (07504908327)
-            </a>
         </div>
     </div>
 
-    <!-- نوسینی جووڵاو لە خوار پڕۆفایل -->
+    <!-- نوسینی جووڵاو -->
     <div class="marquee-container">
         <div class="marquee-text">
             ✨ پێشانگای عادل بۆ کڕین و فرۆشتنی هەموو جۆرە مەکینەیەکی دوورمان بە زەمانەت ✨ بەخێر هاتن بۆ لای ئێمە ✨ باشترین مەکینەکانی ئۆڤەر و نەخشدار بە بەردەستن ✨
         </div>
     </div>
 
-    <div class="container" style="margin-top: 25px;">
+    <!-- بەشی بیۆ و واتساپ لە ژێر نوسینی جووڵاو -->
+    <div class="info-section">
+        <div class="bio-text">پێشانگای عادل بۆ کڕین و فرۆشتنی هەموو جۆرە مەکینەیەکی دوورمان</div>
+        <a href="https://wa.me/9647504908327" class="whatsapp-btn" target="_blank">
+            💬 پەیوەندی واتساپ (07504908327)
+        </a>
+    </div>
+
+    <div class="container">
         <div class="section-title">ڤیدیۆی نمایشی بەرهەمەکان</div>
         
         <div class="products-grid">
             
-            <!-- بەرهەمی یەکەم: مەکینەی ئۆڤەر بڕاندی عادل -->
+            <!-- بەرهەمی یەکەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/UksJtW_eVCw?autoplay=0&mute=0&controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/UksJtW_eVCw?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی ئۆڤەر بڕاندی عادل</div>
-                        <div class="video-desc">بەردەستە بە جۆرەکانی:</div>
                         <ul class="features-list">
                             <li>٣ داوو، ٤ داوو، ٥ داوو</li>
                             <li>لەگەڵ ٥ ساڵ زەمانەت</li>
@@ -234,15 +272,14 @@
                 </div>
             </div>
 
-            <!-- بەرهەمی دووەم: مەکینەی برادەر ٢٥ نەقشی یابانی -->
+            <!-- بەرهەمی دووەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/SI0P8JNs4k8?autoplay=0&mute=0&controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/SI0P8JNs4k8?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی برادەر ٢٥ نەقشی یابانی</div>
-                        <div class="video-desc">کامل ئەشیای خۆی:</div>
                         <ul class="features-list">
                             <li>٢٥ شێواز و نەخش</li>
                             <li>دوو ساڵ زەمانەت</li>
@@ -255,17 +292,16 @@
                 </div>
             </div>
 
-            <!-- بەرهەمی سێیەم: مەکینەی ئۆڤەر بڕاندی جاکی -->
+            <!-- بەرهەمی سێیەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/mufieb7stvE?autoplay=0&mute=0&controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/mufieb7stvE?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی ئۆڤەر بڕاندی جاکی</div>
-                        <div class="video-desc">٣ و ٤ و ٥ داوو:</div>
                         <ul class="features-list">
-                            <li>کامل ئەشیای خۆی</li>
+                            <li>٣ و ٤ و ٥ داوو</li>
                             <li>دوو ساڵ زەمانەت</li>
                         </ul>
                     </div>
@@ -275,15 +311,14 @@
                 </div>
             </div>
 
-            <!-- بەرهەمی چوارەم: مەکینەی برادەر ١٠ نەقشی یابانی اصلی -->
+            <!-- بەرهەمی چوارەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/bX8fMcRHNFg?autoplay=0&mute=0&controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/bX8fMcRHNFg?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی برادەر ١٠ نەقشی یابانی اصلی</div>
-                        <div class="video-desc">کامل ئەشیای خۆی:</div>
                         <ul class="features-list">
                             <li>١٠ شێواز و نەخش</li>
                             <li>دوو ساڵ زەمانەت</li>
@@ -301,3 +336,4 @@
 
 </body>
 </html>
+
