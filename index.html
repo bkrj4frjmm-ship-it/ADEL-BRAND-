@@ -8,13 +8,13 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
         body { background-color: #0f1115; color: #f3f4f6; padding-bottom: 50px; }
         
-        /* Premium Header & Cover with Sewing Machine Image */
+        /* Premium Header & Cover with Adel Sewing Machine Image */
         .profile-header {
             position: relative;
             width: 100%;
             min-height: 320px;
-            background: linear-gradient(135deg, rgba(15, 17, 21, 0.75) 0%, rgba(15, 17, 21, 0.92) 100%),
-                        url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(135deg, rgba(15, 17, 21, 0.7) 0%, rgba(15, 17, 21, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1605548230626-3ff6f3431633?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -159,6 +159,7 @@
             border-color: rgba(59, 130, 246, 0.4);
         }
         
+        /* Video Container with Overlay to hide YouTube Branding/Logo */
         .video-container {
             position: relative;
             width: 100%;
@@ -177,6 +178,16 @@
             height: 100%;
             border: none;
             pointer-events: auto;
+        }
+        /* بۆ داپۆشینی لۆگۆکانی سەر یوتوب لە گۆشەکان */
+        .video-overlay-cover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            z-index: 10;
+            pointer-events: none;
         }
         
         .video-info { margin-top: 4px; }
@@ -258,6 +269,7 @@
             <div class="video-box">
                 <div>
                     <div class="video-container">
+                        <div class="video-overlay-cover"></div>
                         <iframe src="https://www.youtube-nocookie.com/embed/UksJtW_eVCw?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
@@ -277,6 +289,7 @@
             <div class="video-box">
                 <div>
                     <div class="video-container">
+                        <div class="video-overlay-cover"></div>
                         <iframe src="https://www.youtube-nocookie.com/embed/SI0P8JNs4k8?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
@@ -297,6 +310,7 @@
             <div class="video-box">
                 <div>
                     <div class="video-container">
+                        <div class="video-overlay-cover"></div>
                         <iframe src="https://www.youtube-nocookie.com/embed/mufieb7stvE?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
@@ -316,6 +330,7 @@
             <div class="video-box">
                 <div>
                     <div class="video-container">
+                        <div class="video-overlay-cover"></div>
                         <iframe src="https://www.youtube-nocookie.com/embed/bX8fMcRHNFg?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
