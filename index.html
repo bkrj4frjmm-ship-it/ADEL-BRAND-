@@ -8,13 +8,13 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
         body { background-color: #0f1115; color: #f3f4f6; padding-bottom: 50px; }
         
-        /* Premium Header & Cover with Adel Sewing Machine Image */
+        /* Premium Header & Cover with Working Sewing Machine Image */
         .profile-header {
             position: relative;
             width: 100%;
-            min-height: 320px;
-            background: linear-gradient(135deg, rgba(15, 17, 21, 0.7) 0%, rgba(15, 17, 21, 0.9) 100%),
-                        url('https://images.unsplash.com/photo-1605548230626-3ff6f3431633?auto=format&fit=crop&w=1200&q=80');
+            min-height: 340px;
+            background: linear-gradient(180deg, rgba(15, 17, 21, 0.4) 0%, rgba(15, 17, 21, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -50,15 +50,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 40px;
         }
         
         .profile-title {
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 800;
             margin-bottom: 5px;
             color: #ffffff;
             letter-spacing: -0.5px;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
 
         /* Moving Text (Marquee) */
@@ -73,7 +74,7 @@
         .marquee-text {
             display: inline-block;
             padding-left: 100%;
-            animation: marquee 20s linear infinite;
+            animation: marquee 22s linear infinite;
             font-size: 14px;
             font-weight: bold;
         }
@@ -124,13 +125,13 @@
         .section-title { 
             font-size: 18px; 
             font-weight: bold; 
-            margin-bottom: 20px; 
+            margin: 25px 0 15px 0; 
             color: #fff; 
             border-right: 4px solid #3b82f6; 
             padding-right: 12px; 
         }
         
-        /* Grid Layout for Products (دو ستوون لە تەنیشت یەکتر) */
+        /* Grid Layout for Products */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -152,14 +153,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.2s;
-        }
-        .video-box:hover {
-            transform: translateY(-3px);
-            border-color: rgba(59, 130, 246, 0.4);
         }
         
-        /* Video Container with Overlay to hide YouTube Branding/Logo */
         .video-container {
             position: relative;
             width: 100%;
@@ -177,17 +172,6 @@
             width: 100%;
             height: 100%;
             border: none;
-            pointer-events: auto;
-        }
-        /* بۆ داپۆشینی لۆگۆکانی سەر یوتوب لە گۆشەکان */
-        .video-overlay-cover {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            z-index: 10;
-            pointer-events: none;
         }
         
         .video-info { margin-top: 4px; }
@@ -229,12 +213,66 @@
             padding: 4px 10px; 
             border-radius: 20px; 
             border: 1px solid rgba(59, 130, 246, 0.3);
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Gallery Section Style */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        .gallery-item {
+            background: #181b22;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 8px 10px;
+            font-size: 12px;
+            color: #cbd5e1;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Repair Info Section Style */
+        .repair-card {
+            background: #181b22;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .repair-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #60a5fa;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .repair-desc {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.7;
         }
     </style>
 </head>
 <body>
 
-    <!-- بەشی کەڤەر لەگەڵ وێنەی مەکینەی دوورمان و لۆگۆ لە دەستە ڕاستی سەرەوە -->
+    <!-- بەشی کەڤەر لەگەڵ وێنەی سەرەکی مەکینەی دوورمان -->
     <div class="profile-header">
         <div class="top-logo">
             <span>⚙️</span> پێشانگای عادل
@@ -252,7 +290,7 @@
         </div>
     </div>
 
-    <!-- بەشی بیۆ و واتساپ لە ژێر نوسینی جووڵاو -->
+    <!-- بەشی بیۆ و واتساپ -->
     <div class="info-section">
         <div class="bio-text">پێشانگای عادل بۆ کڕین و فرۆشتنی هەموو جۆرە مەکینەیەکی دوورمان</div>
         <a href="https://wa.me/9647504908327" class="whatsapp-btn" target="_blank">
@@ -261,16 +299,15 @@
     </div>
 
     <div class="container">
-        <div class="section-title">ڤیدیۆی نمایشی بەرهەمەکان</div>
         
+        <!-- بەشی ڤیدیۆی نمایشی -->
+        <div class="section-title">ڤیدیۆی نمایشی بەرهەمەکان</div>
         <div class="products-grid">
             
-            <!-- بەرهەمی یەکەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <div class="video-overlay-cover"></div>
-                        <iframe src="https://www.youtube-nocookie.com/embed/UksJtW_eVCw?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/UksJtW_eVCw" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی ئۆڤەر بڕاندی عادل</div>
@@ -281,16 +318,14 @@
                     </div>
                 </div>
                 <div class="price-row">
-                    <div class="badge-new" style="width: 100%; text-align: center;">٥ ساڵ زەمانەت</div>
+                    <div class="badge-new">٥ ساڵ زەمانەت</div>
                 </div>
             </div>
 
-            <!-- بەرهەمی دووەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <div class="video-overlay-cover"></div>
-                        <iframe src="https://www.youtube-nocookie.com/embed/SI0P8JNs4k8?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/SI0P8JNs4k8" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی برادەر ٢٥ نەقشی یابانی</div>
@@ -306,12 +341,10 @@
                 </div>
             </div>
 
-            <!-- بەرهەمی سێیەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <div class="video-overlay-cover"></div>
-                        <iframe src="https://www.youtube-nocookie.com/embed/mufieb7stvE?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/mufieb7stvE" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی ئۆڤەر بڕاندی جاکی</div>
@@ -322,16 +355,14 @@
                     </div>
                 </div>
                 <div class="price-row">
-                    <div class="badge-new" style="width: 100%; text-align: center;">دوو ساڵ زەمانەت</div>
+                    <div class="badge-new">دوو ساڵ زەمانەت</div>
                 </div>
             </div>
 
-            <!-- بەرهەمی چوارەم -->
             <div class="video-box">
                 <div>
                     <div class="video-container">
-                        <div class="video-overlay-cover"></div>
-                        <iframe src="https://www.youtube-nocookie.com/embed/bX8fMcRHNFg?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&iv_load_policy=3" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/bX8fMcRHNFg" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <div class="video-title">مەکینەی برادەر ١٠ نەقشی یابانی اصلی</div>
@@ -348,6 +379,29 @@
             </div>
 
         </div>
+
+        <!-- بەشی وێنەکانی مەکینە (Gallery) -->
+        <div class="section-title">پێشانگای وێنەی مەکینەکان</div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1605548230626-3ff6f3431633?auto=format&fit=crop&w=600&q=80" alt="مەکینەی دوورمان">
+                <div class="gallery-caption">مەکینەی پیشەسازی سەردەم</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" alt="مەکینەی دوورمان">
+                <div class="gallery-caption">جۆرەکانی مەکینەی نەخشدار</div>
+            </div>
+        </div>
+
+        <!-- بەشی زانیاری و چاککردنەوەی مەکینە -->
+        <div class="section-title">زانیاری و ڕێنمایی چاککردنەوە</div>
+        <div class="repair-card">
+            <div class="repair-title">🔧 خزمەتگوزاری چاککردنەوە و چاودێری</div>
+            <div class="repair-desc">
+                پێشانگای عادل جگە لە فرۆشتن، هەستا بە دابینکردنی خزمەتگوزاری چاککردنەوە و نۆژەنکردنەوەی گشت جۆرە مەکینەیەکی دوورمان (ئۆڤەر، ڕاستە، و نەخشدار) بە دەستی شارەزا و پسپۆڕ. بۆ هەر کێشەیەک یان پێویستی بە چاککردنەوە هەیە، دەتوانیت لە ڕێگەی واتساپەوە پەیوەندیمان پێوە بکەیت.
+            </div>
+        </div>
+
     </div>
 
 </body>
